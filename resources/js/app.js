@@ -1,1 +1,3 @@
-require('./bootstrap');
+(async() => {
+    console.log('oi');
+})();
