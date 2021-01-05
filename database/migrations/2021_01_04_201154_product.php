@@ -20,6 +20,7 @@ class Product extends Migration
             $table->integer('qtd_box');
             $table->longText('description');
             $table->date('validate_prod');
+            $table->timestamps();
         });
     }
 

@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        return view('pages.products.index');
+        $products = Product::all();
+        return view('pages.products.index')->with('products', $products);
     }
 
     public function create()
@@ -18,10 +20,16 @@ class ProductController extends Controller
 
     public function save(Request $request)
     {
-        $name = $request->input('name_prod');
-        $type = $request->input('type_prod');
-        $qtd_box = $request->input('qtd_box');
-        $description = $request->input('description');
-        $validate_prod = $request->input('validate_prod');
+        $product = new Product;
+
+        $product->name_prod = $request->name_prod;
+        $product->type_prod = $request->type_prod;
+        $product->qtd_box = $request->qtd_box;
+        $product->description = $request->description;
+        $product->validate_prod = $request->validate_prod;
+
+        if ($product->save()) {
+            return redirect()->route('product.index');
+        }
     }
 }
