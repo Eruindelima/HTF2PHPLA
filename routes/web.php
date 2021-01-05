@@ -27,5 +27,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::prefix('products')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('product.index');
     Route::get('/create', [ProductController::class, 'create'])->name('create.product');
-    Route::get('/save', [ProductController::class, 'save'])->name('save');
+    Route::post('/save', [ProductController::class, 'save'])->name('save.product');
 });
