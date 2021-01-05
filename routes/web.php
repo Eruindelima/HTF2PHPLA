@@ -26,4 +26,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('products')->name('product.')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('index');
+    Route::get('/create', [ProductController::class, 'create'])->name('create.product');
 });

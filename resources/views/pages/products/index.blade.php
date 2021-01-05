@@ -6,7 +6,6 @@
 </div>
 <div class="card-footer py-4">
     <table class="table table-bordered">
-
     </table>
 </div>
 @endsection

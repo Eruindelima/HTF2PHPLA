@@ -9,8 +9,7 @@
                     <div class="col-xl-5 col-lg-6 col-md-8 px-5">
                         <h1 class="text-white">Login</h1>
                         <p class="text-lead text-white">Seja bem vindo ao <strong>HotFood</strong>! A sua plataforma de
-                            doação mais
-                            intuitiva do Brasil!</p>
+                            doações.</p>
                     </div>
                 </div>
             </div>
