@@ -38,4 +38,19 @@ class ProductController extends Controller
         $product = Product::find($id);
         return view('pages.products.create')->with('product', $product);
     }
+
+    public function update(Request $request, $id)
+    {
+        $product = Product::find($id);
+
+        $product->name_prod = $request->name_prod;
+        $product->type_prod = $request->type_prod;
+        $product->qtd_box = $request->qtd_box;
+        $product->description = $request->description;
+        $product->validate_prod = $request->validate_prod;
+
+        if ($product->save()) {
+            return redirect()->route('product.index');
+        }
+    }
 }
