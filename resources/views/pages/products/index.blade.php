@@ -14,16 +14,44 @@
             <td>
                 Tipo
             </td>
+
             <td>
                 Quantidade de caixas
             </td>
+
             <td>
                 Descrição
             </td>
+
             <td>
                 Data de validade
             </td>
         </tr>
+        <tbody>
+            @foreach ($products as $product)
+                <tr>
+                    <td>
+                        {{$product->name_prod}}
+                    </td>
+                    <td>
+                        {{$product->type_prod}}
+                    </td>
+                    <td>
+                        {{$product->qtd_box}}
+                    </td>
+                    <td>
+                        {{$product->description}}
+                    </td>
+                    <td>
+                        {{$product->validate_prod}}
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-danger btn-sm" href="#"><i class="fa fa-trash"></i></a>
+                        <a class="btn btn-outline-success btn-sm" href="{{route('edit.product', $product->id)}}"><i class="fa fa-edit"></i></a>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
 </div>
 @endsection

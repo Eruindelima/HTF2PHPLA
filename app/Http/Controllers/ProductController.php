@@ -32,4 +32,10 @@ class ProductController extends Controller
             return redirect()->route('product.index');
         }
     }
+
+    public function edit($id)
+    {
+        $product = Product::find($id);
+        return view('pages.products.create')->with('product', $product);
+    }
 }
