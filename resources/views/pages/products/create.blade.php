@@ -25,7 +25,7 @@
             <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div class="form-group">
-            <label for="example-date-input" class="form-control-label">Data De Calidade</label>
+            <label for="example-date-input" class="form-control-label">Data De Validade do Produto</label>
             <input class="form-control" type="date" name="validate_prod" value="2020-08-15" id="example-date-input">
         </div>
         <button type="submit" class="btn btn-success">Salvar</button>

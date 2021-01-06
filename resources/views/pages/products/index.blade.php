@@ -6,6 +6,24 @@
 </div>
 <div class="card-footer py-4">
     <table class="table table-bordered">
+        <tr>
+            <td>
+                Nome do Produto
+            </td>
+
+            <td>
+                Tipo
+            </td>
+            <td>
+                Quantidade de caixas
+            </td>
+            <td>
+                Descrição
+            </td>
+            <td>
+                Data de validade
+            </td>
+        </tr>
     </table>
 </div>
 @endsection
