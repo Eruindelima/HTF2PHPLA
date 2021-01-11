@@ -62,4 +62,10 @@ class ProductController extends Controller
             return redirect()->route('product.index');
         }
     }
+
+    public function listClientProduct()
+    {
+        $products = Product::all();
+        return view('pages.products.productList')->with('products', $products);
+    }
 }

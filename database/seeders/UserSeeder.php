@@ -20,5 +20,11 @@ class UserSeeder extends Seeder
             'password' => bcrypt('12345'),
             'is_donor' => true
         ]);
+        User::query()->create([
+            'name' => 'Gabirel',
+            'email' => 'gabriel@hotfood.com',
+            'password' => bcrypt('12345'),
+            'is_donor' => false
+        ]);
     }
 }
