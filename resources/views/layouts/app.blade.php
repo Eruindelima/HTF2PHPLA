@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Hotfood') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -322,7 +322,7 @@
                 <div class="header-body">
                     <div class="py-4">
                         <div class="text-right">
-                            <div class="btn btn-neutral">Incluir Produto</div>
+                            <a class="btn btn-neutral" href="{{route('create.product')}}">Incluir Produto</a>
                         </div>
                     </div>
                 </div>

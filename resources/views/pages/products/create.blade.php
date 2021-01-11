@@ -10,19 +10,19 @@
         @csrf
         <div class="form-group">
             <label for="example-number-input" class="form-control-label">Nome do Produto</label>
-            <input class="form-control" type="text" name="name_prod" value="{{!empty($product->name_prod) ? $product->name_prod : '' }}" placeholder = "Digite aqui o nome do produto" >
+            <input class="form-control" type="text" name="name_prod" value="{{!empty($product->name_prod) ? $product->name_prod : '' }}" placeholder = "Digite aqui o nome do produto" required="required">
         </div>
         <div class="form-group">
             <label for="example-number-input" class="form-control-label">Tipo do produto</label>
-            <input class="form-control" type="text" name="type_prod" value="{{!empty($product->type_prod) ? $product->type_prod : '' }}"  placeholder="Digite aqui o tipo do produto">
+            <input class="form-control" type="text" name="type_prod" value="{{!empty($product->type_prod) ? $product->type_prod : '' }}"  placeholder="Digite aqui o tipo do produto" required="required">
         </div>
         <div class="form-group">
             <label for="example-number-input" class="form-control-label">Quantidade de caixas</label>
-            <input class="form-control" type="number" name="qtd_box" value="{{!empty($product->qtd_box) ? $product->qtd_box : '' }}" value="0" id="example-number-input">
+            <input class="form-control" type="number" name="qtd_box" value="{{!empty($product->qtd_box) ? $product->qtd_box : '' }}" value="0" id="example-number-input" required="required">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Descrição Do produto</label>
-            <textarea class="form-control" name="description"  id="exampleFormControlTextarea1" rows="3">{{!empty($evento->descricao) ? $evento->descricao : ''}}</textarea>
+            <textarea class="form-control" name="description"  id="exampleFormControlTextarea1" rows="3" required="required">{{!empty($evento->descricao) ? $evento->descricao : ''}}</textarea>
         </div>
         <div class="form-group">
             <label for="example-date-input" class="form-control-label">Data De Validade do Produto</label>
