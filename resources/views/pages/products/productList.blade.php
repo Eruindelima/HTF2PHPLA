@@ -46,7 +46,7 @@
                         {{$product->validate_prod}}
                     </td>
                     <td>
-                        <button type="button" class="btn btn-success">Pegar Doação</button>
+                        <button type="button" class="btn btn-success">Quero </button>
                         {{-- <a class="btn btn-outline-danger btn-sm" href="{{route('delete.product', $product->id)}}"><i class="fa fa-trash"></i></a>
                         <a class="btn btn-outline-success btn-sm" href="{{route('edit.product', $product->id)}}"><i class="fa fa-edit"></i></a> --}}
                     </td>

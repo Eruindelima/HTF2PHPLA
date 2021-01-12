@@ -31,5 +31,6 @@ Route::prefix('products')->group(function () {
     Route::get('edit/{id}', [ProductController::class, 'edit'])->name('edit.product');
     Route::post('update/{id}', [ProductController::class, 'update'])->name('update.product');
     Route::get('delete/{id}', [ProductController::class, 'delete'])->name('delete.product');
-    Route::get('client/products/list', [ProductController::class, 'productList'])->name('productList.product');
+    Route::get('client/product/list', [ProductController::class, 'listClientProduct'])->name('listClientProduct.product');
+    Route::get('product/order/{id}', [ProductController::class, 'product'])->name('product.product');
 });

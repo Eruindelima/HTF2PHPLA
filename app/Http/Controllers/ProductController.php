@@ -68,4 +68,8 @@ class ProductController extends Controller
         $products = Product::all();
         return view('pages.products.productList')->with('products', $products);
     }
+
+    public function producOrder($id)
+    {
+    }
 }

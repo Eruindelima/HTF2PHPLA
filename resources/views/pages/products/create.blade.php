@@ -26,7 +26,7 @@
         </div>
         <div class="form-group">
             <label for="example-date-input" class="form-control-label">Data De Validade do Produto</label>
-            <input class="form-control" type="date" name="validate_prod" value="2020-08-15" id="example-date-input">
+            <input class="form-control" type="date" name="validate_prod" value="15-08-2020" id="example-date-input">
         </div>
         <button type="submit" class="btn btn-success">{{!empty($product) ? 'Atualizar': 'Salvar' }}</button>
         <button type="button" class="btn btn-danger">Sair</button>
