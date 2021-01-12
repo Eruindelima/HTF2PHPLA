@@ -47,7 +47,7 @@
                             {{$product->qtd_box}}
                         </td>
                         <td>
-                            {{$product->description}}
+                            {{substr($product->description, 0, 30)}}...
                         </td>
                         <td>
                             {{$product->validate_prod}}
