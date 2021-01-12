@@ -5,5 +5,7 @@
     <h3 class="mb-0">Home</h3>
 </div>
 <div class="card-footer py-4">
+    {{Auth::user()}}
+    <hr />
 </div>
 @endsection

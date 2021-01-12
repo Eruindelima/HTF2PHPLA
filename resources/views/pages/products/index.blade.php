@@ -53,8 +53,12 @@
                             {{$product->validate_prod}}
                         </td>
                         <td>
-                            <a class="btn btn-outline-danger btn-sm" href="{{route('product.delete', $product->id)}}"><i class="fa fa-trash"></i></a>
-                            <a class="btn btn-outline-success btn-sm" href="{{route('product.edit', $product->id)}}"><i class="fa fa-edit"></i></a>
+                            @if(Auth::user()->is_donor)
+                                <a class="btn btn-outline-danger btn-sm" href="{{route('product.delete', $product->id)}}"><i class="fa fa-trash"></i></a>
+                                <a class="btn btn-outline-success btn-sm" href="{{route('product.edit', $product->id)}}"><i class="fa fa-edit"></i></a>
+                            @else
+                                <button type="button" class="btn btn-success">Quero </button>
+                            @endif
                         </td>
                     </tr>
                 @endforeach
