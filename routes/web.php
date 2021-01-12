@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -31,6 +31,7 @@ Route::prefix('products')->group(function () {
     Route::get('edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
     Route::post('update/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::get('delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
-    Route::get('client/product/list', [ProductController::class, 'listClientProduct'])->name('product.client.index');
-    Route::get('product/order/{id}', [ProductController::class, 'product'])->name('product.client.order');
+    Route::get('product/order/{id}', [ProductController::class, 'productOrder'])->name('product.client.order');
+    Route::get('order/list', [ProductController::class, 'orderList'])->name('product.order.index');
+    Route::get('client/order/list', [ProductController::class, 'orderByUser'])->name('product.client.order.index');
 });

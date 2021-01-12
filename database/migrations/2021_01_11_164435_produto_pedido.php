@@ -18,6 +18,9 @@ class ProdutoPedido extends Migration
             $table->integer("prod_id");
             $table->integer("user_id");
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('prod_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 

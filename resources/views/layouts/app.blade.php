@@ -122,7 +122,7 @@
                         @if(Auth::user()->is_donor)
                             <li class="nav-item">
                                 <a class="nav-link {{$currentRouteName === 'home' ? 'active' : ''}}"
-                                    href="{{route('home')}}">
+                                    href="{{route('product.order.index')}}">
                                     <i class=" ni ni-tv-2 text-primary"></i>
                                     <span class="nav-link-text">Pedidos</span>
                                 </a>
