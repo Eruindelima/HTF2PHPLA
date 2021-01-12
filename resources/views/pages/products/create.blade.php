@@ -6,7 +6,7 @@
     <h3 class="mb-0">{{!empty($product) ? 'Editar Produto': 'Incluir Produto' }}</h3>
 </div>
 <div class="card-footer py-4">
-    <form action="{{!empty($product) ? route('update.product', $product->id) : route('save.product')}}" method="post">
+    <form action="{{!empty($product) ? route('product.update', $product->id) : route('product.save')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="example-number-input" class="form-control-label">Nome do Produto</label>

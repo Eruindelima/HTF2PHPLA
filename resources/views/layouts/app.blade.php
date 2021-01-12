@@ -322,7 +322,7 @@
                 <div class="header-body">
                     <div class="py-4">
                         <div class="text-right">
-                            <a class="btn btn-neutral" href="{{route('create.product')}}">Incluir Produto</a>
+                            <a class="btn btn-neutral" href="{{route('product.create')}}">Incluir Produto</a>
                         </div>
                     </div>
                 </div>

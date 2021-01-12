@@ -47,8 +47,8 @@
                     </td>
                     <td>
                         <button type="button" class="btn btn-success">Quero </button>
-                        {{-- <a class="btn btn-outline-danger btn-sm" href="{{route('delete.product', $product->id)}}"><i class="fa fa-trash"></i></a>
-                        <a class="btn btn-outline-success btn-sm" href="{{route('edit.product', $product->id)}}"><i class="fa fa-edit"></i></a> --}}
+                        {{-- <a class="btn btn-outline-danger btn-sm" href="{{route('product.delete', $product->id)}}"><i class="fa fa-trash"></i></a>
+                        <a class="btn btn-outline-success btn-sm" href="{{route('product.edit', $product->id)}}"><i class="fa fa-edit"></i></a> --}}
                     </td>
                 </tr>
             @endforeach

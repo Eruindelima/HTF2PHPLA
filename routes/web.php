@@ -26,11 +26,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('products')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('product.index');
-    Route::get('/create', [ProductController::class, 'create'])->name('create.product');
-    Route::post('/save', [ProductController::class, 'save'])->name('save.product');
-    Route::get('edit/{id}', [ProductController::class, 'edit'])->name('edit.product');
-    Route::post('update/{id}', [ProductController::class, 'update'])->name('update.product');
-    Route::get('delete/{id}', [ProductController::class, 'delete'])->name('delete.product');
-    Route::get('client/product/list', [ProductController::class, 'listClientProduct'])->name('listClientProduct.product');
-    Route::get('product/order/{id}', [ProductController::class, 'product'])->name('product.product');
+    Route::get('/create', [ProductController::class, 'create'])->name('product.create');
+    Route::post('/save', [ProductController::class, 'save'])->name('product.save');
+    Route::get('edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+    Route::post('update/{id}', [ProductController::class, 'update'])->name('product.update');
+    Route::get('delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
+    Route::get('client/product/list', [ProductController::class, 'listClientProduct'])->name('product.client.index');
+    Route::get('product/order/{id}', [ProductController::class, 'product'])->name('product.client.order');
 });
