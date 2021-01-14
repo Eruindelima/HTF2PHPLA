@@ -70,6 +70,11 @@
 
                             <div class="row">
                                 <div class="col-lg-6">
+                                    <label for="input-country" class="form-control-label pt-4" >{{ __('CPF') }}</label>
+                                    <input type="text" id="inputCPF" class="form-control" placeholder="000.000.000-00" name="cpf">
+                                </div>
+
+                                <div class="col-lg-6">
                                     <label for="input-address" class="form-control-label pt-4">{{ __('Endereço') }}</label>
                                     <input id="input-address" class="form-control @error('password') is-invalid @enderror" name="address" placeholder="Rua: Direita, n° 88 , casa 4" type="text">
                                         @error('address')
@@ -78,36 +83,38 @@
                                         </span>
                                         @enderror
                                 </div>
+                            </div>
 
+                            <div class="row">
                                 <div class="col-lg-6">
                                     <label for="input-neighborhood" class="form-control-label pt-4">{{ __('Bairro') }}</label>
-                                    <input type="text" id="input-neighborhood" class="form-control @error('password') is-invalid @enderror" placeholder="neighborhood" value="Vila Guilherme">
+                                    <input type="text" id="input-neighborhood" class="form-control @error('password') is-invalid @enderror" placeholder="Santo Euardo" name="neighborhood">
                                 </div>
-                            </div>
 
-                            <div class="row">
                                 <div class="col-lg-6">
                                     <label for="input-country" class="form-control-label pt-4" >{{ __('CEP') }}</label>
-                                    <input type="number" id="input-postal-code" class="form-control" placeholder="Postal code">
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <label for="input-city" class="form-control-label pt-4" >{{ __('Cidade') }}</label>
-                                    <input type="text" id="input-city" class="form-control" placeholder="City" value="Taboão da Serra">
+                                    <input type="number" id="inputCEP" class="form-control" placeholder="00000-000" name="cep">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <label for="input-country" class="form-control-label pt-4" >{{ __('Estado') }}</label>
-                                    <input type="text" id="input-state" class="form-control" placeholder="state" value="São Paulo">
+                                    <label for="input-city" class="form-control-label pt-4" >{{ __('Cidade') }}</label>
+                                    <input type="text" id="input-city" class="form-control" placeholder="Taboão da serra" name="city">
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <label for="example-tel-input" class="form-control-label pt-4">{{ __('Telefone') }}</label>
-                                    <input class="form-control" type="tel" value="(11) 9 5050-5050" id="example-tel-input">
+                                    <label for="input-country" class="form-control-label pt-4" >{{ __('Estado') }}</label>
+                                    <input type="text" id="input-state" class="form-control" placeholder="São paulo" name="state">
                                 </div>
                             </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="example-tel-input" class="form-control-label pt-4">{{ __('Telefone') }}</label>
+                                <input class="form-control" type="tel" placeholder="(11)-9.5050-5050" id="example-tel-input" name="phone">
+                            </div>
+                        </div>
 
                             <div class="form-group row mt-4">
                                 <div class="col-md-6 offset-md-4">
