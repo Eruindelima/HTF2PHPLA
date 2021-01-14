@@ -37,6 +37,7 @@ class ProductController extends Controller
         $product->qtd_box = $request->qtd_box;
         $product->description = $request->description;
         $product->validate_prod = $request->validate_prod;
+        $product->user_id = Auth::id();
 
         if ($product->save()) {
             return redirect()->route('product.index');

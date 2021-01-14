@@ -53,7 +53,7 @@
                             {{$product->validate_prod}}
                         </td>
                         <td>
-                            @if(Auth::user()->is_donor)
+                            @if(Auth::id() === $product->user_id)
                                 <a class="btn btn-outline-danger btn-sm" href="{{route('product.delete', $product->id)}}"><i class="fa fa-trash"></i></a>
                                 <a class="btn btn-outline-success btn-sm" href="{{route('product.edit', $product->id)}}"><i class="fa fa-edit"></i></a>
                             @else

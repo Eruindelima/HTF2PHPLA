@@ -119,15 +119,13 @@
             <div class="navbar-inner">
                 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                     <ul class="navbar-nav">
-                        @if(Auth::user()->is_donor)
-                            <li class="nav-item">
-                                <a class="nav-link {{$currentRouteName === 'home' ? 'active' : ''}}"
-                                    href="{{route('product.order.index')}}">
-                                    <i class=" ni ni-tv-2 text-primary"></i>
-                                    <span class="nav-link-text">Pedidos</span>
-                                </a>
-                            </li>
-                        @endif
+                        <li class="nav-item">
+                            <a class="nav-link {{$currentRouteName === 'home' ? 'active' : ''}}"
+                                href="{{route('product.order.index')}}">
+                                <i class=" ni ni-tv-2 text-primary"></i>
+                                <span class="nav-link-text">Pedidos</span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link {{$currentRouteName === 'product.index' ? 'active' : ''}}" href="
                                 {{route('product.index')}}">
@@ -204,11 +202,9 @@
             <div class="container-fluid">
                 <div class="header-body">
                     <div class="py-4">
-                        @if(Auth::user()->is_donor)
-                            <div class="text-right">
-                                <a class="btn btn-neutral" href="{{route('product.create')}}">Incluir Produto</a>
-                            </div>
-                        @endif
+                        <div class="text-right">
+                            <a class="btn btn-neutral" href="{{route('product.create')}}">Incluir Produto</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -22,7 +22,7 @@
                     </th>
 
                     <th>
-                        Nome
+                        Donatário
                     </th>
 
                     <th>
