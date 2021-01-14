@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [ProductController::class, 'index'])->name('home');
 
 Route::prefix('products')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('product.index');
@@ -32,6 +32,10 @@ Route::prefix('products')->group(function () {
     Route::post('update/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::get('delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
     Route::get('product/order/{id}', [ProductController::class, 'productOrder'])->name('product.client.order');
-    Route::get('order/list', [ProductController::class, 'orderList'])->name('product.order.index');
     Route::get('client/order/list', [ProductController::class, 'orderByUser'])->name('product.client.order.index');
+});
+
+Route::prefix('orders')->group(function () {
+    Route::get('/sended', [ProductController::class, 'sendedOrder'])->name('order.sended');
+    Route::get('/received', [ProductController::class, 'receivedOrder'])->name('order.received');
 });

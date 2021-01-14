@@ -51,18 +51,6 @@
                                         name="password" required>
                                 </div>
                             </div>
-                            <div class="form-group text-center">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="donor" name="user_type" class="custom-control-input"
-                                        value="1" checked>
-                                    <label class="custom-control-label" for="donor">Doador</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="donat" name="user_type" value="0"
-                                        class="custom-control-input">
-                                    <label class="custom-control-label" for="donat">Donatário</label>
-                                </div>
-                            </div>
                             <div class="custom-control custom-control-alternative custom-checkbox">
                                 <input class="custom-control-input" id="remember" type="checkbox" id="remember"
                                     name="remember">
@@ -81,7 +69,7 @@
                         <a href="#" class="text-light"><small>Esqueceu a senha?</small></a>
                     </div>
                     <div class="col-6 text-right">
-                        <a href="#" class="text-light"><small>Cadastre-se agora mesmo!</small></a>
+                        <a href="{{route('register')}}" class="text-light"><small>Cadastre-se agora mesmo!</small></a>
                     </div>
                 </div>
             </div>

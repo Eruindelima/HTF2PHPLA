@@ -95,22 +95,27 @@ class ProductController extends Controller
         }
     }
 
-    public function orderList() {    
+    public function sendedOrder() {
         $orders = DB::table('product_order')
         ->join('products', 'product_order.prod_id', '=', 'products.id')
-        ->join('users', 'product_order.user_id', '=', 'users.id')
-        ->select('product_order.id as order', 'products.name_prod', 'products.qtd_box', 'users.name', 'users.email')
+        ->join('users as dono', 'products.user_id', '=', 'dono.id')
+        ->join('users as donatario', 'product_order.user_id', '=', 'donatario.id')
+        ->select('product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario')
+        ->where('dono.id', Auth::id())
         ->get();
+
         return view('pages.orders.index')->with('orders', $orders);
     }
 
-    public function orderByUser() {    
+    public function receivedOrder() {    
         $orders = DB::table('product_order')
         ->join('products', 'product_order.prod_id', '=', 'products.id')
-        ->join('users', 'product_order.user_id', '=', 'users.id')
-        ->select('product_order.id as order', 'products.name_prod', 'products.qtd_box', 'users.name', 'users.email')
-        ->where('users.id', Auth::id())
+        ->join('users as dono', 'products.user_id', '=', 'dono.id')
+        ->join('users as donatario', 'product_order.user_id', '=', 'donatario.id')
+        ->select('product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario')
+        ->where('donatario.id', Auth::id())
         ->get();
+
         return view('pages.orders.index')->with('orders', $orders);
     }
 }

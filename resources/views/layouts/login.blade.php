@@ -46,12 +46,12 @@
                 </div>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('login')}}" class="nav-link">
                             <span class="nav-link-inner--text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('register')}}" class="nav-link">
                             <span class="nav-link-inner--text">Cadastre-se</span>
                         </a>
                     </li>

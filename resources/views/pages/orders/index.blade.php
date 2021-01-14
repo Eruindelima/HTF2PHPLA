@@ -22,11 +22,11 @@
                     </th>
 
                     <th>
-                        Donatário
+                        Doador
                     </th>
 
                     <th>
-                        E-mail
+                        Donatário
                     </th>
                 </tr>
             </thead>
@@ -43,10 +43,10 @@
                             {{$order->qtd_box}}
                         </td>
                         <td>
-                            {{$order->name}}
+                            {{$order->doador}}
                         </td>
                         <td>
-                            {{$order->email}}
+                            {{$order->donatario}}
                         </td>
                     </tr>
                 @endforeach

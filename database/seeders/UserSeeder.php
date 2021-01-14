@@ -24,5 +24,10 @@ class UserSeeder extends Seeder
             'email' => 'gabriel@hotfood.com',
             'password' => bcrypt('12345'),
         ]);
+        User::query()->create([
+            'name' => 'Eruin',
+            'email' => 'eruin@hotfood.com',
+            'password' => bcrypt('12345'),
+        ]);
     }
 }

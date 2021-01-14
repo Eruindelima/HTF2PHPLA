@@ -120,10 +120,17 @@
                 <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link {{$currentRouteName === 'home' ? 'active' : ''}}"
-                                href="{{route('product.order.index')}}">
+                            <a class="nav-link {{$currentRouteName === 'order.sended' ? 'active' : ''}}"
+                                href="{{route('order.sended')}}">
                                 <i class=" ni ni-tv-2 text-primary"></i>
-                                <span class="nav-link-text">Pedidos</span>
+                                <span class="nav-link-text">Pedidos Criados</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{$currentRouteName === 'order.received' ? 'active' : ''}}"
+                                href="{{route('order.received')}}">
+                                <i class=" ni ni-tv-2 text-primary"></i>
+                                <span class="nav-link-text">Pedidos Recebidos</span>
                             </a>
                         </li>
                         <li class="nav-item">
