@@ -39,7 +39,14 @@
                 </div>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="image" class="form-control-label">Selecione somente uma imagem da doação </label>
+                    <input type="file" id="image" name="image" class="custom-file-input">
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">

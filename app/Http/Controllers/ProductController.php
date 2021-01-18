@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-
 class ProductController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -39,6 +37,19 @@ class ProductController extends Controller
         $product->validate_prod = $request->validate_prod;
         $product->user_id = Auth::id();
 
+        //imagem upload
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalname().strtotime("now")).".".$extension;
+
+            $request->image->move(public_path('/assets/img/productimage'), $imageName);
+
+            $product->image = $imageName;
+        }
+
         if ($product->save()) {
             return redirect()->route('product.index');
         }
@@ -59,6 +70,19 @@ class ProductController extends Controller
         $product->qtd_box = $request->qtd_box;
         $product->description = $request->description;
         $product->validate_prod = $request->validate_prod;
+
+        //imagem upload
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalname().strtotime("now")).".".$extension;
+
+            $request->image->move(public_path('/assets/img/productimage'), $imageName);
+
+            $product->product = $imageName;
+        }
 
         if ($product->save()) {
             return redirect()->route('product.index');
@@ -95,7 +119,8 @@ class ProductController extends Controller
         }
     }
 
-    public function sendedOrder() {
+    public function sendedOrder()
+    {
         $orders = DB::table('product_order')
         ->join('products', 'product_order.prod_id', '=', 'products.id')
         ->join('users as dono', 'products.user_id', '=', 'dono.id')
@@ -107,7 +132,8 @@ class ProductController extends Controller
         return view('pages.orders.index')->with('orders', $orders);
     }
 
-    public function receivedOrder() {    
+    public function receivedOrder()
+    {
         $orders = DB::table('product_order')
         ->join('products', 'product_order.prod_id', '=', 'products.id')
         ->join('users as dono', 'products.user_id', '=', 'dono.id')
