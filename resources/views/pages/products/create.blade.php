@@ -6,7 +6,7 @@
     <h3 class="mb-0">{{!empty($product) ? 'Editar Produto': 'Incluir Produto' }}</h3>
 </div>
 <div class="card-footer py-4">
-    <form action="{{!empty($product) ? route('product.update', $product->id) : route('product.save')}}" method="post">
+    <form action="{{!empty($product) ? route('product.update', $product->id) : route('product.save')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-lg-6">
@@ -40,12 +40,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label for="image" class="form-control-label">Selecione somente uma imagem da doação </label>
-                    <input type="file" id="image" name="image" class="custom-file-input">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="image" class="form-control-label">Selecione somente uma imagem da doação </label>
+                        <input type="file" id="image" name="image" class="custom-file-input">
+                    </div>
                 </div>
-            </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
