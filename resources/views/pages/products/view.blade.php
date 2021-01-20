@@ -1,57 +1,47 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="card-header border-0">
-    <h3 class="mb-0">Produto disponível para doação</h3>
-</div>
-<table class="table table-bordered">
-    <thead class="thead-light">
-        <tr>
-            <th>
-                Nome do Produto
-            </th>
-            <th>
-                Tipo
-            </th>
-            <th>
-                Quantidade de caixas
-            </th>
-            <th>
-                Descrição
-            </th>
-            <th>
-                Data de validade
-            </th>
-            <th>
-                Ações
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
+<div class="card-profile">
+    <div class="row justify-content-center">
+        <div class="col-lg-3 order-lg-2">
+            <div class="card-profile-image">
+                <a href="#">
+                    <img src="{{url('assets/img/productimage', $product->image)}}" class="img-fluid" style="max-width: 150px;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+        <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-sm btn-info  mr-4 ">Quero</a>
+            <a href="#" class="btn btn-sm btn-default float-right">Voltar</a>
+        </div>
+    </div>
+    <div class="card-body pt-0">
+        <div class="row">
+            <div class="col">
+                <div class="card-profile-stats d-flex justify-content-center">
+                    <div>
+                        <span class="heading">223894723892</span>
+                        <span class="description">Caixas</span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <h5 class="h3">
                 {{$product->name_prod}}
-            </td>
-            <td>
-                {{$product->type_prod}}
-            </td>
-            <td>
-                {{$product->qtd_box}}
-            </td>
-            <td>
-                {{$product->description}}
-            </td>
-            <td>
-                {{$product->validate_prod}}
-            </td>
-            <td>
-                {{$product->image}}
-            </td>
-            <td>
-                <a class="btn btn-success btn-sm" href="{{route('product.client.order', $product->id)}}">Quero</button></a>
-                <a class="btn btn-secondary btn-sm" href="{{route('product.index')}}">Voltar</button></a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+            </h5>
+            <div class="h5 font-weight-300">
+                <i class="ni location_pin mr-2"></i>Tipo do produto
+            </div>
+
+            <div>
+                <i class="ni education_hat mr-2"></i>Descrição do produto
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
