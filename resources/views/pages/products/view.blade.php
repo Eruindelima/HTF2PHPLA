@@ -13,33 +13,29 @@
     </div>
     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
         <div class="d-flex justify-content-between">
-            <a href="#" class="btn btn-sm btn-info  mr-4 ">Quero</a>
-            <a href="#" class="btn btn-sm btn-default float-right">Voltar</a>
+            <a href="{{route('product.client.order', $product->id)}}" class="btn btn-sm btn-info  mr-4 ">Quero</a>
+            <a class="btn btn-sm btn-default float-right" href="{{route('product.index')}}">Voltar</a>
         </div>
     </div>
     <div class="card-body pt-0">
         <div class="row">
             <div class="col">
-                <div class="card-profile-stats d-flex justify-content-center">
-                    <div>
-                        <span class="heading">223894723892</span>
-                        <span class="description">Caixas</span>
+                    <h3 class="text-center">{{$product->name_prod}}</h3>
+                    <div class="text-center">
+                        <h3 class="heading">Quantidade de caixas</h3>
+                        <p> {{$product->qtd_box}} </p>
                     </div>
-
-
                 </div>
             </div>
         </div>
-        <div class="text-center">
-            <h5 class="h3">
-                {{$product->name_prod}}
-            </h5>
-            <div class="h5 font-weight-300">
-                <i class="ni location_pin mr-2"></i>Tipo do produto
-            </div>
-
-            <div>
-                <i class="ni education_hat mr-2"></i>Descrição do produto
+        <div class="row">
+            <div class="col text-center">
+                    <h3 class="heading">Tipo do produto</h3>
+                    {{$product->type_prod}}
+                <div class="text-center">
+                    <h3>Descrição do produto</h3>
+                    {{$product->description}}
+                </div>
             </div>
         </div>
     </div>
