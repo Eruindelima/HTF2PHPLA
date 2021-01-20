@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +32,7 @@ Route::prefix('products')->group(function () {
     Route::get('delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
     Route::get('product/order/{id}', [ProductController::class, 'productOrder'])->name('product.client.order');
     Route::get('client/order/list', [ProductController::class, 'orderByUser'])->name('product.client.order.index');
+    Route::get('product/client/productShow/{id}', [ProductController::class, 'productShow'])->name('product.client.productShow');
 });
 
 Route::prefix('orders')->group(function () {

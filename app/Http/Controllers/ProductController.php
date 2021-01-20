@@ -139,4 +139,11 @@ class ProductController extends Controller
 
         return view('pages.orders.index')->with('orders', $orders);
     }
+
+    public function productShow($id)
+    {
+        $product = Product::find($id);
+
+        return view('pages.products.view')->with('product', $product);
+    }
 }

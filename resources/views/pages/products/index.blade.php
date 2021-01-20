@@ -18,23 +18,18 @@
                     <th>
                         Nome do Produto
                     </th>
-
                     <th>
                         Tipo
                     </th>
-
                     <th>
                         Quantidade de caixas
                     </th>
-
                     <th>
                         Descrição
                     </th>
-
                     <th>
                         Data de validade
                     </th>
-
                     <th>
                         Ações
                     </th>
@@ -64,7 +59,7 @@
                                 <a class="btn btn-outline-success btn-sm" href="{{route('product.edit', $product->id)}}"><i class="fa fa-edit"></i></a>
                             @else
                                 <a class="btn btn-success btn-sm" href="{{route('product.client.order', $product->id)}}">Quero</button>
-                                <a href="" class="btn btn-outline-primary btn-sm"><i class="fa fa-eye"></i>
+                                <a class="btn btn-outline-primary btn-sm" href="{{route('product.client.productShow', $product->id)}}"><i class="fa fa-eye"></i>
                             @endif
                             </a>
                         </td>
