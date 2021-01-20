@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+@if(!empty($mensagem))
+<div class="alert alert-success">
+    {{ $mensagem }}
+</div>
+@endif
+
 <div class="card-header border-0">
     <h3 class="mb-0">Produtos</h3>
 </div>
@@ -28,7 +34,7 @@
                     <th>
                         Data de validade
                     </th>
-                
+
                     <th>
                         Ações
                     </th>
@@ -57,8 +63,10 @@
                                 <a class="btn btn-outline-danger btn-sm" href="{{route('product.delete', $product->id)}}"><i class="fa fa-trash"></i></a>
                                 <a class="btn btn-outline-success btn-sm" href="{{route('product.edit', $product->id)}}"><i class="fa fa-edit"></i></a>
                             @else
-                                <a class="btn btn-success" href="{{route('product.client.order', $product->id)}}">Quero</button>
+                                <a class="btn btn-success btn-sm" href="{{route('product.client.order', $product->id)}}">Quero</button>
+                                <a href="" class="btn btn-outline-primary btn-sm"><i class="fa fa-eye"></i>
                             @endif
+                            </a>
                         </td>
                     </tr>
                 @endforeach

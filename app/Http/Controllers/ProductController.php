@@ -15,10 +15,11 @@ class ProductController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::all();
-        return view('pages.products.index')->with('products', $products);
+        $products = Product::query()->orderBy('name_prod')->get();
+        $mensagem = $request->session()->get('mensagem');
+        return view('pages.products.index', compact('products', 'mensagem'))->with('products', $products);
     }
 
     public function create()
@@ -37,16 +38,14 @@ class ProductController extends Controller
         $product->validate_prod = $request->validate_prod;
         $product->user_id = Auth::id();
 
+        $request->session()->flash('mensagem', "O produto {$product->name_prod} foi criado com sucesso.");
+
         //imagem upload
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $requestImage = $request->image;
-
             $extension = $requestImage->extension();
-
             $imageName = md5($requestImage->getClientOriginalname().strtotime("now")).".".$extension;
-
             $request->image->move(public_path('/assets/img/productimage'), $imageName);
-
             $product->image = $imageName;
         }
 
@@ -74,13 +73,9 @@ class ProductController extends Controller
         //imagem upload
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $requestImage = $request->image;
-
             $extension = $requestImage->extension();
-
             $imageName = md5($requestImage->getClientOriginalname().strtotime("now")).".".$extension;
-
             $request->image->move(public_path('/assets/img/productimage'), $imageName);
-
             $product->product = $imageName;
         }
 
