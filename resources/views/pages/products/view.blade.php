@@ -13,11 +13,11 @@
     </div>
     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
         <div class="d-flex justify-content-between">
-            <a href="{{route('product.client.order', $product->id)}}" class="btn btn-sm btn-info  mr-4 ">Quero</a>
+            <a href="{{route('product.client.order', $product->id)}}" class="btn btn-sm btn-info  mr-4">Quero</a>
             <a class="btn btn-sm btn-default float-right" href="{{route('product.index')}}">Voltar</a>
         </div>
     </div>
-    <div class="card-body pt-0">
+    <div class="card-body">
         <div class="row">
             <div class="col">
                     <h3 class="text-center">{{$product->name_prod}}</h3>
@@ -31,10 +31,10 @@
         <div class="row">
             <div class="col text-center">
                     <h3 class="heading">Tipo do produto</h3>
-                    {{$product->type_prod}}
+                    <p class="m-1">{{$product->type_prod}}</p>
                 <div class="text-center">
                     <h3>Descrição do produto</h3>
-                    {{$product->description}}
+                    <p class="m-2">{{$product->description}}</p>
                 </div>
             </div>
         </div>

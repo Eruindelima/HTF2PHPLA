@@ -165,7 +165,7 @@
                             <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
                                 <i class="ni ni-zoom-split-in"></i>
                             </a>
-                        </li>    
+                        </li>
                     </ul>
                     <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
                         <li class="nav-item dropdown">
@@ -226,7 +226,7 @@
             </div>
             <footer class="footer pt-0">
                 <div class="row align-items-center justify-content-lg-between">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="copyright text-center  text-lg-left  text-muted">
                             &copy; 2020 <a href="#" class="font-weight-bold ml-1" target="_blank">HotFood</a>
                         </div>
