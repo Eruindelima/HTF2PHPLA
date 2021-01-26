@@ -39,3 +39,7 @@ Route::prefix('orders')->group(function () {
     Route::get('/sended', [ProductController::class, 'sendedOrder'])->name('order.sended');
     Route::get('/received', [ProductController::class, 'receivedOrder'])->name('order.received');
 });
+
+Route::prefix('profile')->group(function () {
+    Route::get('/edit_profile/{id}', [UserController::class, 'editProfile'])->name('profile.edit');
+});

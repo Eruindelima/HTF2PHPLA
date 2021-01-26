@@ -184,10 +184,12 @@
                                 <div class="dropdown-header noti-title">
                                     <h6 id="greeting" class="text-overflow m-0">...</h6>
                                 </div>
-                                <a href="#!" class="dropdown-item">
+
+                                <a href="{{route('profile.editProfile', Auth::id())}}" class="dropdown-item">
                                     <i class="ni ni-single-02"></i>
                                     <span>Editar Perfil</span>
                                 </a>
+
                                 <div class="dropdown-divider"></div>
                                 <a href="{{route('logout')}}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
