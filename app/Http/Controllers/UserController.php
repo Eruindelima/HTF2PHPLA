@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function edit($id)
+    public function edit()
     {
-        $profile = User::findOrFail($id);
+        $user_id = Auth::id();
+        $profile = User::findOrFail($user_id);
 
         return view('pages.profile.edit_profile', ['profile' => $profile]);
     }

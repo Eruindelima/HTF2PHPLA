@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -41,5 +42,5 @@ Route::prefix('orders')->group(function () {
 });
 
 Route::prefix('profile')->group(function () {
-    Route::get('/edit_profile/{id}', [UserController::class, 'editProfile'])->name('profile.edit');
+    Route::get('/edit', [UserController::class, 'edit'])->name('profile.edit');
 });
