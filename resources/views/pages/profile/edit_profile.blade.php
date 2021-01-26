@@ -68,7 +68,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label for="input-country" class="form-control-label pt-4" >{{ __('CPF') }}</label>
-                                    <input type="text" id="inputCPF" class="form-control" placeholder="000.000.000-00" name="cpf" required="required">
+                                    <input type="text" id="inputCPF" class="form-control" placeholder="000.000.000-00" name="cpf" required="required" value="{{ $user->cpf }}" />
                                 </div>
 
                                 <div class="col-lg-6">
