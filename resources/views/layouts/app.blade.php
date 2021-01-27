@@ -185,7 +185,7 @@
                                     <h6 id="greeting" class="text-overflow m-0">...</h6>
                                 </div>
 
-                                <a href="{{route('profile.edit', Auth::id())}}" class="dropdown-item">
+                                <a href="{{route('profile.edit')}}" class="dropdown-item">
                                     <i class="ni ni-single-02"></i>
                                     <span>Editar Perfil</span>
                                 </a>

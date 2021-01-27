@@ -24,8 +24,10 @@ class UserController extends Controller
         return view('pages.profile.edit_profile', ['profile' => $profile]);
     }
 
-    public function update(Request $request, $user_id)
+    public function update(Request $request)
     {
+        $user_id = Auth::id();
+
         $profile = User::find($user_id);
         $profile->name = $request->name;
         $profile->email = $request->email;
@@ -43,14 +45,16 @@ class UserController extends Controller
 
         $profile->save();
 
-        $profile_contact = UserContact::firstWhere('user_id', $user_id);
-        $profile_contact->cpf = $request->cpf;
-        $profile_contact->address = $request->address;
-        $profile_contact->neighborhood = $request->neighborhood;
-        $profile_contact->cep = $request->cep;
-        $profile_contact->city = $request->city;
-        $profile_contact->state = $request->state;
-        $profile_contact->phone = $request->phone;
+        $profile_contact = UserContact::firstOrCreate([
+            'user_id'   =>  $user_id,
+            'cpf'   =>  $request->cpf,
+            'address'   =>  $request->address,
+            'neighborhood'  =>  $request->neighborhood,
+            'cep'   =>  $request->cep,
+            'city'  =>  $request->city,
+            'state' =>  $request->state,
+            'phone' =>  $request->phone
+        ]);
 
         $request->session()->flash('mensagem', "{$profile->name} cadastro foi atualizado com sucesso.");
 
