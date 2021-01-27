@@ -5,7 +5,7 @@
     <h3 class="mb-0">{{ Auth::user()->name}}</h3>
 </div>
 <div class="card-footer py-4">
-    <form method="POST" action="">
+    <form method="post" action="{{route('profile.update')}}">
         @csrf
         <div class="row">
             <div class="col-lg-6">
@@ -99,10 +99,11 @@
         <div class="form-group row mt-4">
             <div class="col-md-6 offset-md-4">
                 <button type="submit" class="btn btn-primary">
-                    {{ __('Salvar Edição') }}
+                    {{ __('Atualizar Cadastro') }}
                 </button>
             </div>
         </div>
     </form>
 </div>
 @endsection
+

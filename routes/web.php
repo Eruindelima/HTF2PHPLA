@@ -43,4 +43,5 @@ Route::prefix('orders')->group(function () {
 
 Route::prefix('profile')->group(function () {
     Route::get('/edit', [UserController::class, 'edit'])->name('profile.edit');
+    Route::post('/update', [UserController::class, 'update'])->name('profile.update');
 });

@@ -29,26 +29,32 @@ class UserController extends Controller
         $profile = User::find($user_id);
         $profile->name = $request->name;
         $profile->email = $request->email;
-        $profile->password = $request->password;
-        $profile->save();
-
-        $profile_contact = UserContact::firstWhere('user_ida', $user_id);
-        $profile_contact->cpf = $request->cpf;
-        $profile_contact->adress = $request->adress;
-        $profile_contact->neighborhood = $request->neighborhood;
-        $profile_contact->cep = $request->cep;
-        $profile_contact->city = $request->city;
-        $profile_contact->state = $request->state;
-        $profile_contact->phone = $request->phone;
+        if (isset($profile->password)) {
+            $profile->password = $request->password;
+        }
 
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $requestImage = $request->image;
             $extension = $requestImage->extension();
             $imageName = md5($requestImage->getClientOriginalname().strtotime("now")).".".$extension;
             $request->image->move(public_path('/assets/img/profile'), $profile);
-            $profile->product = $imageName;
+            $profile->image = $imageName;
         }
-        if ($profile->save()) {
+
+        $profile->save();
+
+        $profile_contact = UserContact::firstWhere('user_id', $user_id);
+        $profile_contact->cpf = $request->cpf;
+        $profile_contact->address = $request->address;
+        $profile_contact->neighborhood = $request->neighborhood;
+        $profile_contact->cep = $request->cep;
+        $profile_contact->city = $request->city;
+        $profile_contact->state = $request->state;
+        $profile_contact->phone = $request->phone;
+
+        $request->session()->flash('mensagem', "{$profile->name} cadastro foi atualizado com sucesso.");
+
+        if ($profile_contact->save()) {
             return redirect()->route('product.index');
         }
     }
