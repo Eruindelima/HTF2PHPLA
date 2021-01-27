@@ -59,7 +59,7 @@
 
 
         <button type="submit" class="btn btn-success">{{!empty($product) ? 'Atualizar': 'Salvar' }}</button>
-        <button type="button" class="btn btn-danger" >Sair</button>
+        <a type="button" class="btn btn-danger" href="{{route('product.index')}}">Sair</a>
     </form>
 </div>
 @endsection
