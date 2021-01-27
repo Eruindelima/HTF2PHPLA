@@ -173,7 +173,7 @@
                                 aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder" src="{{url(Auth::user()->image)}}">
+                                        <img alt="Image placeholder" src="{{url('assets/img/profile', Auth::user()->image)}}">
                                     </span>
                                     <div class="media-body  ml-2  d-none d-lg-block">
                                         <span class="mb-0 text-sm  font-weight-bold">{{Auth::user()->name}}</span>

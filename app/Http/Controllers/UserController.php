@@ -31,7 +31,7 @@ class UserController extends Controller
         $profile = User::find($user_id);
         $profile->name = $request->name;
         $profile->email = $request->email;
-        if (isset($profile->password)) {
+        if (isset($request->password)) {
             $profile->password = $request->password;
         }
 
@@ -39,7 +39,7 @@ class UserController extends Controller
             $requestImage = $request->image;
             $extension = $requestImage->extension();
             $imageName = md5($requestImage->getClientOriginalname().strtotime("now")).".".$extension;
-            $request->image->move(public_path('/assets/img/profile'), $profile);
+            $request->image->move(public_path('/assets/img/profile'), $imageName);
             $profile->image = $imageName;
         }
 

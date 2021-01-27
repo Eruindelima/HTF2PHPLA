@@ -5,7 +5,7 @@
     <h3 class="mb-0">{{ Auth::user()->name}}</h3>
 </div>
 <div class="card-footer py-4">
-    <form method="post" action="{{route('profile.update')}}">
+    <form method="post" action="{{route('profile.update')}}" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-lg-6">
@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <label for="password" class="form-control-label pt-4">{{ __('Digite sua nova senha') }}</label>
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -41,7 +41,7 @@
 
             <div class="col-lg-6">
                 <label for="password-confirm" class="form-control-label pt-4">{{ __('Confirme nova Senha') }}</label>
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
             </div>
         </div>
         <div class="row">
@@ -90,10 +90,20 @@
                 <input class="form-control" type="tel"  id="example-tel-input" name="phone" value="{{!empty($profile->phone) ? $profile->phone : ''}}" required autocomplete="phone" autofocus>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-lg-6">
-                <label for="image" class="form-control-label">{{ Auth::user()->name}} {{ __('Coloque uma foto em seu perfil') }}</label>
-                <input type="file" id="image" name="image" class="custom-file-input">
+                <div class="row">
+                    <div class="col-4">
+                        <span class="avatar avatar-sm rounded-circle">
+                            <img alt="Image placeholder" src="{{url('assets/img/profile', Auth::user()->image)}}">
+                        </span>
+                    </div>
+
+                    <div class="col-8">
+                        <label for="image" class="form-control-label">{{ Auth::user()->name}} {{ __('Coloque uma foto em seu perfil') }}</label>
+                        <input type="file" id="image" name="image" class="custom-file-input">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="form-group row mt-4">
