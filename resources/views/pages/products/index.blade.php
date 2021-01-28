@@ -51,7 +51,7 @@
                             {{substr($product->description, 0, 30)}}...
                         </td>
                         <td>
-                            {{$product->validate_prod}}
+                            {{date('d/m/y', strtotime($product->validate_prod))}}
                         </td>
                         <td>
                             @if(Auth::id() === $product->user_id)
