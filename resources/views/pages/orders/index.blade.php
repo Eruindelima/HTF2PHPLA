@@ -12,19 +12,15 @@
                     <th>
                         #
                     </th>
-
                     <th>
                         Produto
                     </th>
-
                     <th>
                         Quantidade
                     </th>
-
                     <th>
                         Doador
                     </th>
-
                     <th>
                         Donatário
                     </th>
@@ -47,6 +43,9 @@
                         </td>
                         <td>
                             {{$order->donatario}}
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-info" href="{{route('product.client.productDetails', $product->id)}}">Detalhes</a>
                         </td>
                     </tr>
                 @endforeach

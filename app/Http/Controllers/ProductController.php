@@ -146,4 +146,17 @@ class ProductController extends Controller
 
         return view('pages.products.view')->with('product', $product);
     }
+
+    public function productDetails()
+    {
+        $details = DB::table('product_order')
+        ->join('products', 'product_order.prod_id', '=', 'products.id')
+        ->join('users', 'products.user_id', '=', 'users.id')
+        ->join('user_contact', 'products.user_id', '=', 'user_contact.user_id')
+        ->select('product_order', 'product_order.id', 'products.image', 'products.name_prod', 'products.description', 'products.qtd_box', 'user.name as Doador', 'user_contact.address', 'user_contact.neighborhood', 'user_contact.cep', 'user_contact.city', 'user_contact.state', 'user_contact.phone')
+        ->where('product.user_id', Auth::id())
+        ->get();
+
+        return view('pages.products.details')->with('product', $details);
+    }
 }
