@@ -45,7 +45,7 @@
                             {{$order->donatario}}
                         </td>
                         <td>
-                            <a class="btn btn-outline-info" href="{{route('product.client.productDetails', $product->id)}}">Detalhes</a>
+                            <a class="btn btn-outline-info" href="{{route('product.client.productDetails', $order->order)}}">Detalhes</a>
                         </td>
                     </tr>
                 @endforeach
