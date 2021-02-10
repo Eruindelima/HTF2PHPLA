@@ -169,22 +169,24 @@
                     </ul>
                     <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
                         <li class="nav-item dropdown">
-                            <a class="nav-link {{ ($countNotifications ? 'pulse' : '') }}" href="#" role="button"
+                            <a data-channel="notification-channel"
+                                class="nav-link {{ ($countNotifications ? 'pulse' : '') }}" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="ni ni-bell-55"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right py-0 overflow-hidden">
                                 <div class="px-3 py-3">
                                     @if($countNotifications)
-                                    <h6 class="text-sm text-muted m-0">
+                                    <h6 data-channel="notification-channel" class="text-sm text-muted m-0">
                                         Você tem <strong class="text-primary">{{$countNotifications}}</strong> novo(s)
                                         pedido(s).
                                     </h6>
                                     @else
-                                    <h6 class="text-sm text-muted m-0">Você não tem novos pedidos.</h6>
+                                    <h6 data-channel="notification-channel" class="text-sm text-muted m-0">Você não tem
+                                        novos pedidos.</h6>
                                     @endif
                                 </div>
-                                <div class="list-group list-group-flush">
+                                <div data-channel="notification-channel" class="list-group list-group-flush">
                                     @foreach($resumeNotifications as $order)
                                     <a href="{{route("product.client.productDetails", ['id' => $order->id])}}"
                                         class="list-group-item list-group-item-action">

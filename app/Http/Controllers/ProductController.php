@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NotificationEvent;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -111,6 +112,18 @@ class ProductController extends Controller
 
         if ($order->save()) {
             $product->delete();
+
+            $countNotification = Order::query()
+                ->where('pendant', true)
+                ->where('owner_id', $product->user_id)
+                ->count();
+
+            NotificationEvent::dispatch($countNotification, [
+                'name' => auth()->user()->name,
+                'route' => route("product.client.productDetails", ['id' => $order->id]),
+                'createdAt' => $order->created_at,
+                'photo' => asset("assets/img/profile/".auth()->user()->image)
+            ]);
             return redirect()->route('product.index');
         }
     }
