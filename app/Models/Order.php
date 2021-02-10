@@ -12,4 +12,19 @@ class Order extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'owner_id', 'id');
+    }
+
+    public function getCreatedAtAttribute(string $value)
+    {
+        return date('d/m/Y H:i', strtotime($value));
+    }
 }

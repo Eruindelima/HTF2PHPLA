@@ -15,8 +15,16 @@ class ProdutoPedido extends Migration
     {
         Schema::create('product_order', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("prod_id");
-            $table->integer("user_id");
+
+            $table->unsignedInteger("prod_id");
+            $table->foreign('prod_id')->references('id')->on('products');
+
+            $table->unsignedInteger("user_id");
+            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->unsignedInteger("owner_id");
+            $table->foreign('owner_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }
@@ -29,8 +37,5 @@ class ProdutoPedido extends Migration
     public function down()
     {
         Schema::dropIfExists('product_order');
-        Schema::table('product_order', function (Blueprint $table) {
-            $table->dropColumn('id');
-        });
     }
 }

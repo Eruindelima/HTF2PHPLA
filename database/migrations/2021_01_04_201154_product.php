@@ -34,8 +34,5 @@ class Product extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('id');
-        });
     }
 }
