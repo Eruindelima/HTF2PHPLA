@@ -154,8 +154,7 @@ class ProductController extends Controller
         ->join('users', 'products.user_id', '=', 'users.id')
         ->join('user_contact', 'products.user_id', '=', 'user_contact.user_id')
         ->select(
-            'product_order',
-            'product_order.id',
+            'product_order.*',
             'products.*',
             'users.name as Doador',
             'user_contact.*',

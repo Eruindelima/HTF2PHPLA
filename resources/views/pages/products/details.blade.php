@@ -6,7 +6,7 @@
         <div class="col-lg-3 order-lg-2">
             <div class="card-profile-image">
                 <a href="#">
-                    <img src="{{url('assets/img/productimage', $product->image)}}" class="img-fluid" style="max-width: 150px;">
+                    <img src="{{url('assets/img/productimage', $product->image)}}" class="img-fluid" style="max-width: 200px;">
                 </a>
             </div>
         </div>
@@ -32,6 +32,7 @@
                 </div>
             </div>
         </div>
+
     </div>
       <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
         <div class="d-flex justify-content-between">
