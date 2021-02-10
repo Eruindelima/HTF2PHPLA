@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if(isset($isSuccessFull) && $isSuccessFull)
+<div class="alert alert-success">Pedido concluído com sucesso!</div>
+@endif
+
 <div class="card-header border-0">
     <h3 class="mb-0">{{$label ?? 'Pedidos'}}</h3>
 </div>
@@ -58,9 +63,14 @@
                     @endif
                 </td>
                 <td>
-
                     <a class="btn btn-outline-primary btn-sm"
-                        href="{{route('product.client.productDetails', $order->order)}}"><i class="fa fa-eye"></i>
+                        href="{{route('product.client.productDetails', $order->order)}}">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    @if($order->pendant)
+                    <a class="btn btn-success btn-sm"
+                        href="{{route('product.client.approve', ['order' => $order->order])}}">Aprovar</a>
+                    @endif
                 </td>
             </tr>
             @endforeach

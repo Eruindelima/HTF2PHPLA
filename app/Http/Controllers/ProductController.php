@@ -115,7 +115,7 @@ class ProductController extends Controller
         }
     }
 
-    public function sendedOrder()
+    public function sendedOrder(Request $request)
     {
         $label = "Produtos Criados";
         $orders = DB::table('product_order')
@@ -124,9 +124,13 @@ class ProductController extends Controller
         ->join('users as donatario', 'product_order.user_id', '=', 'donatario.id')
         ->select('product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario', 'product_order.pendant')
         ->where('dono.id', Auth::id())
+        ->orderByDesc('product_order.created_at')
         ->get();
-
-        return view('pages.orders.index')->with('orders', $orders)->with('label', $label);
+        $isSuccessFull = $request->has('success') && $request->success;
+        return view('pages.orders.index')
+        ->with('orders', $orders)
+        ->with('label', $label)
+        ->with('isSuccessFull', $isSuccessFull);
     }
 
     public function receivedOrder()
@@ -166,5 +170,12 @@ class ProductController extends Controller
         ->first();
 
         return view('pages.products.details')->with('product', $details);
+    }
+
+    public function approve(Order $order)
+    {
+        $order->pendant = false;
+        $order->save();
+        return redirect()->route('order.sended', ['success' => 1]);
     }
 }

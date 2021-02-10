@@ -31,6 +31,7 @@ Route::middleware([NotificationMiddleware::class])->group(function () {
         Route::get('product/order/{id}', [ProductController::class, 'productOrder'])->name('product.client.order');
         Route::get('client/order/list', [ProductController::class, 'orderByUser'])->name('product.client.order.index');
         Route::get('product/client/productShow/{id}', [ProductController::class, 'productShow'])->name('product.client.productShow');
+        Route::get('product/client/details/{order}/approve', [ProductController::class, 'approve'])->name('product.client.approve');
         Route::get('product/client/details/{id}', [ProductController::class, 'productDetails'])->name('product.client.productDetails');
     });
 

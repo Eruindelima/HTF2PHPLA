@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 @if(!empty($mensagem))
 <div class="alert alert-success">
     {{ $mensagem }}
