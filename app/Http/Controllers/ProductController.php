@@ -161,7 +161,7 @@ class ProductController extends Controller
             'user_contact.*',
         )
         ->where('product_order.id', $id)
-        ->get();
+        ->first();
 
         return view('pages.products.details')->with('product', $details);
     }
