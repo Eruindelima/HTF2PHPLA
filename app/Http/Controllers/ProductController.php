@@ -85,10 +85,11 @@ class ProductController extends Controller
         }
     }
 
-    public function delete($id)
+    public function delete($id, Request $request)
     {
         $product = Product::find($id);
 
+        $request->session()->flash('mensagem', "O produto {$product->name_prod} excluido com sucesso.");
         if ($product->delete()) {
             return redirect()->route('product.index');
         }

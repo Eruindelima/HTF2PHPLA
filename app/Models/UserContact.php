@@ -18,4 +18,9 @@ class UserContact extends Model
         'state',
         'phone'
     ];
+
+    public function contact()
+    {
+        $this->belongsTo(User::class, 'id');
+    }
 }
