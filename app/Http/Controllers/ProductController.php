@@ -125,6 +125,8 @@ class ProductController extends Controller
                 'createdAt' => $order->created_at,
                 'photo' => asset("assets/img/profile/".auth()->user()->image)
             ]);
+            $request->session()->flash('mensagem', "O produto {$product->name_prod} foi para sua lista de produtos recebidos acompanhe a pendência de seu pedido até que o mesmo seja liberado para retirada.");
+
             return redirect()->route('product.index');
         }
     }

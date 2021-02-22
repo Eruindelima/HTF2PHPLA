@@ -14,7 +14,8 @@ class UserContact extends Migration
     public function up()
     {
         Schema::create('user_contact', function (Blueprint $table) {
-            $table->integer('user_id');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('cpf');
             $table->string('address');
             $table->string('neighborhood');
