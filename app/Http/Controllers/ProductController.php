@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\NotificationEvent;
+use App\Models\category;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -23,9 +24,10 @@ class ProductController extends Controller
         return view('pages.products.index', compact('products', 'mensagem'))->with('products', $products);
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        return view('pages.products.create');
+        $category = Category::all();
+        return view('pages.products.create', compact('category'));
     }
 
     public function save(Request $request)

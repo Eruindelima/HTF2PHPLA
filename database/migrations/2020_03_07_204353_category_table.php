@@ -9,7 +9,7 @@ class CategoryTable extends Migration
     public function up()
     {
         Schema::create('category', function (Blueprint $table) {
-            $table->increments('id');
+            $table->unsignedInteger('id');
             $table->string('name');
             $table->timestamps();
         });
