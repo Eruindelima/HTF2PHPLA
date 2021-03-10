@@ -19,7 +19,11 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="example-number-input" class="form-control-label">Tipo do produto</label>
-                    <input class="form-control" type="text" name="type_prod" value="{{!empty($product->type_prod) ? $product->type_prod : '' }}"  placeholder="Digite aqui o tipo do produto" required="required">
+                    <select class="form-control" name="type_prod" required="required" >
+                        @foreach ($category as $item)
+                            <option value="{{$item->id}}">{{$item->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
         </div>

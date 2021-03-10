@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Events\NotificationEvent;
-use App\Models\category;
+use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -53,6 +54,11 @@ class ProductController extends Controller
         }
 
         if ($product->save()) {
+            $product_category = new ProductCategory;
+            $product_category->category_id = $product->type_prod;
+            $product_category->prod_id = $product->id;
+            $product_category->save();
+
             return redirect()->route('product.index');
         }
     }
