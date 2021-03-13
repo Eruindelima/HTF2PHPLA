@@ -67,7 +67,7 @@
                         href="{{route('product.client.productDetails', $order->order)}}">
                         <i class="fa fa-eye"></i>
                     </a>
-                    @if($order->pendant)
+                    @if($order->pendant && Auth::id() === $order->owner_id)
                     <a class="btn btn-success btn-sm"
                         href="{{route('product.client.approve', ['order' => $order->order])}}">Aprovar</a>
                     @endif

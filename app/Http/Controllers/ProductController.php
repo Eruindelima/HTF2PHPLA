@@ -164,7 +164,7 @@ class ProductController extends Controller
         ->join('products', 'product_order.prod_id', '=', 'products.id')
         ->join('users as dono', 'products.user_id', '=', 'dono.id')
         ->join('users as donatario', 'product_order.user_id', '=', 'donatario.id')
-        ->select('product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario', 'product_order.pendant')
+        ->select('product_order.owner_id', 'product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario', 'product_order.pendant')
         ->where('donatario.id', Auth::id())
         ->get();
 
