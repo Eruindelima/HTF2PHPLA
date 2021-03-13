@@ -49,9 +49,10 @@
                 <label for="input-country" class="form-control-label pt-4">{{ __('CPF') }}</label>
                 <input type="text" id="inputCPF" class="form-control"  name="cpf" value="{{!empty($profile->cpf) ? $profile->cpf : ''}}" required autocomplete="cpf" autofocus>
             </div>
+
             <div class="col-lg-6">
                 <label for="input-address" class="form-control-label pt-4">{{ __('Endereço') }}</label>
-                <input id="input-address" class="form-control @error('password') is-invalid @enderror" name="address"  value="{{!empty($profile->address) ? $profile->address : '' }}" required autocomplete="address" >
+                <input id="rua" class="form-control @error('password') is-invalid @enderror" name="address"  value="{{!empty($profile->address) ? $profile->address : '' }}" required autocomplete="address" >
                 @error('address')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -59,28 +60,24 @@
                 @enderror
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-6">
                 <label for="input-neighborhood" class="form-control-label pt-4">{{ __('Bairro') }}</label>
-                <input type="text" id="input-neighborhood" class="form-control @error('password') is-invalid @enderror" name="neighborhood" value="{{!empty($profile->neighborhood) ? $profile->neighborhood : ''}}" required autocomplete="neighborhood" autofocus>
+                <input type="text" id="bairro" class="form-control @error('password') is-invalid @enderror" name="neighborhood" value="{{!empty($profile->neighborhood) ? $profile->neighborhood : ''}}" required autocomplete="neighborhood" autofocus>
             </div>
-
             <div class="col-lg-6">
                 <label for="input-country" class="form-control-label pt-4">{{ __('CEP') }}</label>
-                <input type="number" id="inputCEP" class="form-control" name="cep" value="{{!empty($profile->cep) ? $profile->cep : ''}}" required autocomplete="cep" autofocus>
+                <input type="number" id="cep" class="form-control" name="cep" value="{{!empty($profile->cep) ? $profile->cep : ''}}" required autocomplete="cep" autofocus>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-6">
                 <label for="input-city" class="form-control-label pt-4">{{ __('Cidade') }}</label>
-                <input type="text" id="input-city" class="form-control" name="city" value="{{!empty($profile->city) ? $profile->city : ''}}" required autocomplete="city" autofocus>
+                <input type="text" id="cidade" class="form-control" name="city" value="{{!empty($profile->city) ? $profile->city : ''}}" required autocomplete="city" autofocus>
             </div>
-
             <div class="col-lg-6">
                 <label for="input-country" class="form-control-label pt-4">{{ __('Estado') }}</label>
-                <input type="text" id="input-state" class="form-control" name="state" value="{{!empty($profile->state) ? $profile->state : ''}}" required autocomplete="state" autofocus>
+                <input type="text" id="uf" class="form-control" name="state" value="{{!empty($profile->state) ? $profile->state : ''}}" required autocomplete="state" autofocus>
             </div>
         </div>
 

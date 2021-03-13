@@ -75,37 +75,37 @@
                                 </div>
 
                                 <div class="col-lg-6">
+                                    <label for="input-country" class="form-control-label pt-4" >{{ __('CEP') }}</label>
+                                    <input type="number" id="cep" class="form-control" placeholder="00000-000" name="cep" size="10" maxlength="9" required="required" >
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
                                     <label for="input-address" class="form-control-label pt-4">{{ __('Endereço') }}</label>
-                                    <input id="input-address" class="form-control @error('password') is-invalid @enderror" name="address" placeholder="Rua: Direita, n° 88 , casa 4" type="text" required="required">
+                                    <input id="rua" class="form-control @error('password') is-invalid @enderror" name="address" placeholder="Rua: Direita, n° 88 , casa 4" type="text"  size="60" required="required">
                                         @error('address')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
                                 </div>
-                            </div>
-
-                            <div class="row">
                                 <div class="col-lg-6">
                                     <label for="input-neighborhood" class="form-control-label pt-4">{{ __('Bairro') }}</label>
-                                    <input type="text" id="input-neighborhood" class="form-control @error('password') is-invalid @enderror" placeholder="Santo Euardo" name="neighborhood" required="required">
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <label for="input-country" class="form-control-label pt-4" >{{ __('CEP') }}</label>
-                                    <input type="number" id="inputCEP" class="form-control" placeholder="00000-000" name="cep" required="required">
+                                    <input type="text" id="bairro" class="form-control @error('password') is-invalid @enderror" placeholder="Santo Euardo" name="neighborhood" size="40" required="required">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label for="input-city" class="form-control-label pt-4" >{{ __('Cidade') }}</label>
-                                    <input type="text" id="input-city" class="form-control" placeholder="Taboão da serra" name="city" required="required">
+                                    <input type="text" id="cidade" class="form-control" placeholder="Taboão da serra" name="city" size="40" required="required">
                                 </div>
 
                                 <div class="col-lg-6">
                                     <label for="input-country" class="form-control-label pt-4" >{{ __('Estado') }}</label>
-                                    <input type="text" id="input-state" class="form-control" placeholder="São paulo" name="state" required="required">
+                                    <input type="text" id="uf" class="form-control" placeholder="São paulo" name="state" required="required">
                                 </div>
                             </div>
 
