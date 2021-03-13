@@ -77,6 +77,7 @@
     <script src="{{asset('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
     <script src="{{asset('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
     <script src="{{asset('assets/js/argon.js?v=1.2.0')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 
 </html>

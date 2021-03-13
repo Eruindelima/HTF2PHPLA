@@ -20,7 +20,12 @@ class ProductController extends Controller
 
     public function index(Request $request)
     {
-        $products = Product::query()->orderBy('name_prod')->get();
+        $products = Product::query()
+        ->orderBy('name_prod')
+        ->join('product_category', 'product_category.prod_id', '=', 'products.id')
+        ->join('category', 'product_category.category_id', '=', 'category.id')
+        ->get();
+
         $mensagem = $request->session()->get('mensagem');
         return view('pages.products.index', compact('products', 'mensagem'))->with('products', $products);
     }
@@ -146,7 +151,7 @@ class ProductController extends Controller
         ->join('products', 'product_order.prod_id', '=', 'products.id')
         ->join('users as dono', 'products.user_id', '=', 'dono.id')
         ->join('users as donatario', 'product_order.user_id', '=', 'donatario.id')
-        ->select('product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario', 'product_order.pendant')
+        ->select('product_order.owner_id', 'product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario', 'product_order.pendant')
         ->where('dono.id', Auth::id())
         ->orderByDesc('product_order.created_at')
         ->get();

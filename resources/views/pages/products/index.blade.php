@@ -43,7 +43,7 @@
                     {{$product->name_prod}}
                 </td>
                 <td>
-                    {{$product->type_prod}}
+                    {{$product->name}}
                 </td>
                 <td>
                     {{$product->qtd_box}}
