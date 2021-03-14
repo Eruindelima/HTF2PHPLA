@@ -21,7 +21,7 @@
                     <label for="example-number-input" class="form-control-label">Tipo do produto</label>
                     <select class="form-control" name="type_prod" required="required" >
                         @foreach ($category as $item)
-                            <option value="{{$item->id}}">{{$item->name}}</option>
+                            <option value="{{$item->id}}" {{$item->id === $product->category_id ? 'selected' : ''}}>{{$item->name}}</option>
                         @endforeach
                     </select>
                 </div>

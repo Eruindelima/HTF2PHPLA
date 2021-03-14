@@ -22,6 +22,7 @@ class ProductController extends Controller
     {
         $products = Product::query()
         ->orderBy('name_prod')
+        ->select('products.*', 'category.name')
         ->join('product_category', 'product_category.prod_id', '=', 'products.id')
         ->join('category', 'product_category.category_id', '=', 'category.id')
         ->get();
@@ -70,8 +71,17 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-        $product = Product::find($id);
-        return view('pages.products.create')->with('product', $product);
+        $product = Product::query()
+        ->orderBy('name_prod')
+        ->select('products.*', 'products.id as prod_id', 'category.*', 'category_id as category_id')
+        ->join('product_category', 'product_category.prod_id', '=', 'products.id')
+        ->join('category', 'product_category.category_id', '=', 'category.id')
+        ->where('products.id', $id)
+        ->first();
+
+        $category = Category::all();
+        return view('pages.products.create')
+            ->with(['product' => $product, 'category' => $category]);
     }
 
     public function update(Request $request, $id)
@@ -94,6 +104,9 @@ class ProductController extends Controller
         }
 
         if ($product->save()) {
+            $product_category = ProductCategory::where('prod_id', $id)->first();
+            $product_category->category_id = $request->type_product->id;
+            $product_category->save();
             return redirect()->route('product.index');
         }
     }

@@ -13,7 +13,6 @@ class UserController extends Controller
     public function edit()
     {
         $user_id = Auth::id();
-        $profile = User::findOrFail($user_id);
 
         $profile = DB::table('users')
             ->leftJoin('user_contact', 'users.id', '=', 'user_contact.user_id')
