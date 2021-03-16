@@ -89,7 +89,6 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         $product->name_prod = $request->name_prod;
-        $product->type_prod = $request->type_prod;
         $product->qtd_box = $request->qtd_box;
         $product->description = $request->description;
         $product->validate_prod = $request->validate_prod;
@@ -105,8 +104,9 @@ class ProductController extends Controller
 
         if ($product->save()) {
             $product_category = ProductCategory::where('prod_id', $id)->first();
-            $product_category->category_id = $request->type_product->id;
+            $product_category->category_id = $request->type_prod;
             $product_category->save();
+
             return redirect()->route('product.index');
         }
     }
