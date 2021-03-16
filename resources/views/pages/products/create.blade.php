@@ -6,7 +6,7 @@
     <h3 class="mb-0">{{!empty($product) ? 'Editar Produto': 'Incluir Produto' }}</h3>
 </div>
 <div class="card-footer py-4">
-    <form action="{{!empty($product) ? route('product.update', $product->id) : route('product.save')}}" method="post" enctype="multipart/form-data">
+    <form action="{{!empty($product) ? route('product.update', $product->prod_id) : route('product.save')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-lg-6">
@@ -21,7 +21,7 @@
                     <label for="example-number-input" class="form-control-label">Tipo do produto</label>
                     <select class="form-control" name="type_prod" required="required" >
                         @foreach ($category as $item)
-                            <option value="{{$item->id}}" {{$item->id === $product->category_id ? 'selected' : ''}}>{{$item->name}}</option>
+                            <option value="{{$item->id}}" {{!empty($product) ? ($item->id == $product->category_id ? 'selected' : '')   : ''}} >{{$item->name}}</option>
                         @endforeach
                     </select>
                 </div>
