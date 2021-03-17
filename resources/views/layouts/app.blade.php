@@ -100,18 +100,18 @@
                                 </div>
                                 <div data-channel="notification-channel" class="list-group list-group-flush">
                                     @foreach($resumeNotifications as $order)
-                                    <a href="{{route("product.client.productDetails", ['id' => $order->id])}}"
+                                    <a href="{{route('product.client.productDetails', ['id' => $order->id])}}"
                                         class="list-group-item list-group-item-action">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                                                 <img alt="Image placeholder"
-                                                    src="{{asset("assets/img/profile/{$order->user->image}")}}"
+                                                    src="{{asset('assets/img/profile/{$order->user->image}')}}"
                                                     class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div>
-                                                        <h4 class="mb-0 text-sm">{{$order->user->name}}</h4>
+                                                        <h4 class="mb-0 text-sm">{{$order->user}}</h4>
                                                     </div>
                                                     <div class="text-right text-muted">
                                                         <small>Pedido feito em: {{$order->created_at}}</small>
