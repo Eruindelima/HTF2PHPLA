@@ -32,7 +32,7 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="example-number-input" class="form-control-label">Quantidade de caixas</label>
-                    <input class="form-control" type="number" name="qtd_box" value="{{!empty($product->qtd_box) ? $product->qtd_box : '' }}" value="0" id="example-number-input" required="required">
+                    <input class="form-contro" name="qtd_box" type="number" value="{{!empty($product->qtd_box) ? $product->qtd_box : '' }}" value="0" id="example-number-input" required="required">
                 </div>
             </div>
 

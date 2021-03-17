@@ -19,8 +19,8 @@ class ProdutoPedido extends Migration
             $table->unsignedInteger("prod_id");
             $table->foreign('prod_id')->references('id')->on('products');
 
-            $table->unsignedInteger("user_id");
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedInteger("client_id");
+            $table->foreign('client_id')->references('id')->on('users');
 
             $table->unsignedInteger("owner_id");
             $table->foreign('owner_id')->references('id')->on('users');

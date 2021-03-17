@@ -10,13 +10,16 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::query()->create([
-            'name' => 'Fruta',
+            'name' => 'Frutas',
         ]);
         Category::query()->create([
-            'name' => 'Legume',
+            'name' => 'Legumes',
         ]);
         Category::query()->create([
-            'name' => 'Verdura',
+            'name' => 'Verduras',
+        ]);
+        Category::query()->create([
+            'name' => 'Grãos',
         ]);
     }
 }

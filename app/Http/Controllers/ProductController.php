@@ -134,7 +134,7 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         $order->prod_id = $id;
-        $order->user_id = Auth::id();
+        $order->client_id = Auth::id();
         $order->owner_id = $product->user_id;
 
         if ($order->save()) {
@@ -163,7 +163,7 @@ class ProductController extends Controller
         $orders = DB::table('product_order')
         ->join('products', 'product_order.prod_id', '=', 'products.id')
         ->join('users as dono', 'products.user_id', '=', 'dono.id')
-        ->join('users as donatario', 'product_order.user_id', '=', 'donatario.id')
+        ->join('users as donatario', 'product_order.client_id', '=', 'donatario.id')
         ->select('product_order.owner_id', 'product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario', 'product_order.pendant')
         ->where('dono.id', Auth::id())
         ->orderByDesc('product_order.created_at')
@@ -181,7 +181,7 @@ class ProductController extends Controller
         $orders = DB::table('product_order')
         ->join('products', 'product_order.prod_id', '=', 'products.id')
         ->join('users as dono', 'products.user_id', '=', 'dono.id')
-        ->join('users as donatario', 'product_order.user_id', '=', 'donatario.id')
+        ->join('users as donatario', 'product_order.client_id', '=', 'donatario.id')
         ->select('product_order.owner_id', 'product_order.id as order', 'products.name_prod', 'products.qtd_box', 'dono.name as doador', 'donatario.name as donatario', 'product_order.pendant')
         ->where('donatario.id', Auth::id())
         ->get();
