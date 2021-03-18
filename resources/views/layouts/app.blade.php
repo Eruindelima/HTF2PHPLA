@@ -22,7 +22,7 @@
         <div class="scrollbar-inner">
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="{{asset('assets/img/brand/blue.png')}}" class="navbar-brand-img" alt="...">
+                    <img src="{{asset('assets/img/brand/logo.jpeg')}}" class="navbar-brand-img" alt="...">
                 </a>
             </div>
             @php
@@ -137,7 +137,7 @@
                                                         <h4 class="mb-0 text-sm">{{$order->user}}</h4>
                                                     </div>
                                                     <div class="text-right text-muted">
-                                                        <small>Pedido feito em: {{$order->created_at}}</small>
+                                                        <small>O pedido aprovado: {{$order->created_at}}</small>
                                                     </div>
                                                 </div>
                                             </div>
