@@ -22,7 +22,7 @@
         <div class="scrollbar-inner">
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="{{asset('assets/img/brand/logo.jpeg')}}" class="navbar-brand-img" alt="...">
+                    <img src="assets/img/brand/logo_hotfood.jpeg" class="navbar-brand-img" >
                 </a>
             </div>
             @php

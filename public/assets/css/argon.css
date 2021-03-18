@@ -29840,3 +29840,7 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
 }
 
 
+.brand-image {
+    min-width: 10px;
+    min-height: 10px;
+}
