@@ -14,15 +14,14 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}"
         type="text/css">
     <link rel="stylesheet" href="{{asset('assets/css/argon.css')}}" type="text/css">
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
 </head>
 
 <body>
     <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
         <div class="scrollbar-inner">
             <div class="sidenav-header  align-items-center">
-                <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="assets/img/brand/logo_hotfood.jpeg" class="navbar-brand-img" >
+                <a class="navbar-brand " href="javascript:void(0)">
+                    <img src="assets/img/brand/logosf.png" class="img-index" >
                 </a>
             </div>
             @php
@@ -34,14 +33,14 @@
                         <li class="nav-item">
                             <a class="nav-link {{$currentRouteName === 'order.sended' ? 'active' : ''}}"
                                 href="{{route('order.sended')}}">
-                                <i class=" ni ni-tv-2 text-primary"></i>
+                                <i class=" ni ni-cart text-primary"></i>
                                 <span class="nav-link-text">Produtos Criados</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{$currentRouteName === 'order.received' ? 'active' : ''}}"
                                 href="{{route('order.received')}}">
-                                <i class=" ni ni-tv-2 text-primary"></i>
+                                <i class=" ni ni-cart text-primary"></i>
                                 <span class="nav-link-text">Produtos Recebidos</span>
                             </a>
                         </li>
@@ -137,7 +136,7 @@
                                                         <h4 class="mb-0 text-sm">{{$order->user}}</h4>
                                                     </div>
                                                     <div class="text-right text-muted">
-                                                        <small>O pedido aprovado: {{$order->created_at}}</small>
+                                                        <small>Pedido aprovado: {{$order->created_at}}</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -213,7 +212,7 @@
             <footer class="footer pt-0">
                 <div class="row align-items-center justify-content-lg-between">
                     <div class="col-lg-12">
-                        <div class="copyright text-center  text-lg-left  text-muted">
+                        <div class="copyright text-center  text-lg-center  text-muted">
                             &copy; 2020 <a href="#" class="font-weight-bold ml-1" target="_blank">HotFood</a>
                         </div>
                     </div>

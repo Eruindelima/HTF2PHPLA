@@ -2,14 +2,16 @@
 
 @section('content')
 <div class="main-content">
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-gradient-primary py-5 py-lg-8 pt-lg-8">
         <div class="container">
-            <div class="header-body text-center mb-7">
+            <div class="header-body text-center mb-1">
+                <div class="imagem-logo">
+                    <img src="assets/img/brand/logosf.png" style="width: 150px; heigth: 150px;">
+                </div>
                 <div class="row justify-content-center">
-                    <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-                        <h1 class="text-white">Login</h1>
-                        <p class="text-lead text-white">Seja bem vindo ao <strong>HotFood</strong>! A sua plataforma de
-                            doações.</p>
+                    <div class="col-xl-5 col-lg-6 col-md-8 px-1">
+                        <p class="text-lead text-white">Seja bem vindo ao <strong>HotFood</strong>!
+                        </br>A sua plataforma de doações.</p>
                     </div>
                 </div>
             </div>
@@ -66,7 +68,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-6">
-                        <a href="#" class="text-light"><small>Esqueceu a senha?</small></a>
+                        <a href="#" class="text-light"><small>Esqueceu a senha ?</small></a>
                     </div>
                     <div class="col-6 text-right">
                         <a href="{{route('register')}}" class="text-light"><small>Cadastre-se agora mesmo!</small></a>

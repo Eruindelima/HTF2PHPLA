@@ -96,7 +96,7 @@ body
     text-align: left;
 
     color: #525f7f;
-    background-color: #f8f9fe;
+    background-color: #525f7f;
 }
 
 [tabindex='-1']:focus:not(:focus-visible)
@@ -873,10 +873,11 @@ pre code
 {
     display: flex;
 
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -10px;
+    margin-left: -10px;
 
     flex-wrap: wrap;
+
 }
 
 .no-gutters
@@ -8769,7 +8770,7 @@ a.close.disabled
 
 .bg-primary
 {
-    background-color: #5e72e4 !important;
+    background-color: #9DF2EE !important;
 }
 
 a.bg-primary:hover,
@@ -17881,12 +17882,12 @@ a.text-darker:focus
 
 .text-body
 {
-    color: #525f7f !important;
+    color: #fff !important;
 }
 
 .text-muted
 {
-    color: #8898aa !important;
+    color: #fff !important;
 }
 
 .text-black-50
@@ -19932,7 +19933,7 @@ a.btn-icon-only
 
 .footer
 {
-    padding: 30px 0;
+    padding: 0px 0;
 
     background: #f8f9fe;
 }
@@ -20028,7 +20029,7 @@ a.btn-icon-only
 
 .footer-auto-bottom
 {
-    position: absolute;
+    position: relative;
     bottom: 0;
 
     width: 100%;
@@ -21152,7 +21153,7 @@ textarea[resize='horizontal']
 {
     .navbar-horizontal.navbar-transparent .navbar-nav .nav-link
     {
-        color: rgba(255, 255, 255, .95);
+        color: #525FTF;
     }
     .navbar-horizontal.navbar-transparent .navbar-nav .nav-link:hover,
     .navbar-horizontal.navbar-transparent .navbar-nav .nav-link:focus
@@ -21397,8 +21398,11 @@ textarea[resize='horizontal']
 .navbar-vertical .navbar-brand > img
 {
     max-width: 100%;
-    max-height: 2rem;
+    max-height: 10rem;
 }
+
+
+
 @media (min-width: 768px)
 {
     .navbar-vertical .navbar-collapse
@@ -21568,6 +21572,7 @@ textarea[resize='horizontal']
 
     flex: 1 1;
     align-items: stretch;
+    margin-top: 45px;
 }
 .navbar-vertical.navbar-expand-xs .navbar-collapse > *
 {
@@ -24509,7 +24514,7 @@ button.section-darker:focus
 
 .bg-gradient-primary
 {
-    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+    background: linear-gradient(87deg, #55F0E8 0, #55F0E8 100%) !important;
 }
 
 .bg-gradient-secondary
@@ -25656,7 +25661,9 @@ a.text-cyan:focus
 
 .text-white
 {
-    color: #fff !important;
+    color: #000000 !important;
+    font-size: 20px;
+    font-style: bold;
 }
 
 a.text-white:hover,
@@ -27718,6 +27725,8 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
     padding: 0;
 
     border: none !important;
+
+
 }
 
 .scroll-wrapper > .scroll-content::-webkit-scrollbar
@@ -29840,7 +29849,20 @@ input.datetimepicker[data-color='yellow'] + .bootstrap-datetimepicker-widget.dro
 }
 
 
-.brand-image {
-    min-width: 10px;
-    min-height: 10px;
+.imagem-logo {
+    display: inline-block;
+}
+.footer{
+    background-color: #525f7f;
+}
+
+.text-footer {
+    color:#fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.img-index {
+    width:113px;
+    height:113px
 }

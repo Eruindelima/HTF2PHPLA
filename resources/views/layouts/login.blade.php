@@ -41,15 +41,13 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="assets/img/brand/logo.jpeg" class="brand-image">
-                </div>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a href="{{route('login')}}" class="nav-link">
                             <span class="nav-link-inner--text">Login</span>
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a href="{{route('register')}}" class="nav-link">
                             <span class="nav-link-inner--text">Cadastre-se</span>
@@ -60,12 +58,12 @@
             </div>
         </div>
     </nav>
-    <footer class="py-5" id="footer-main">
+    <footer class="py-3" id="footer-main">
         <div class="container">
             <div class="row align-items-center justify-content-xl-between">
                 <div class="col-xl-12">
-                    <div class="copyright text-center text-xl-left text-muted">
-                        &copy; 2020 <a href="#" class="font-weight-bold ml-1" target="_blank">HotFood</a>
+                    <div class="copyright text-center ">
+                        &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">HotFood</a>
                     </div>
                 </div>
             </div>
