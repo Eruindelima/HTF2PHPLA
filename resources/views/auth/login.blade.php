@@ -6,7 +6,7 @@
         <div class="container">
             <div class="header-body text-center mb-1">
                 <div class="imagem-logo">
-                    <img src="assets/img/brand/logosf.png" style="width: 150px; heigth: 150px;">
+                    <img src="{{asset('storage/logosf.png')}}" style="width: 150px; heigth: 150px;">
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-8 px-1">

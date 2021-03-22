@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Product extends Migration
+class ProductTable extends Migration
 {
     public function up()
     {
@@ -16,7 +16,6 @@ class Product extends Migration
             $table->longText('description');
             $table->date('validate_prod');
             $table->integer('user_id');
-            $table->softDeletes();
             $table->timestamps();
         });
     }

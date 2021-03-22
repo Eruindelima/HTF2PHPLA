@@ -37,8 +37,11 @@
   }
 }
 
-
-
 .footer-main {
-    color: #fff;
+  color: #fff;
 }
+
+.text-muted {
+  color: #000 !important;
+}
+

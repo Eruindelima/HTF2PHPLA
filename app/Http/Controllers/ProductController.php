@@ -138,7 +138,6 @@ class ProductController extends Controller
         $order->owner_id = $product->user_id;
 
         if ($order->save()) {
-            $product->delete();
 
             $countNotification = Order::query()
                 ->where('pendant', true)

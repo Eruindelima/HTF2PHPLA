@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}"
         type="text/css">
     <link rel="stylesheet" href="{{asset('assets/css/argon.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{mix('css/app.css')}}" type="text/css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <div class="scrollbar-inner">
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand " href="javascript:void(0)">
-                    <img src="assets/img/brand/logosf.png" class="img-index" >
+                    <img src="{{asset('storage/logosf.png')}}" class="img-index" >
                 </a>
             </div>
             @php
@@ -104,8 +105,8 @@
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                                                 <img alt="Image placeholder"
-                                                    src="{{asset('assets/img/profile/', $order->image)}}"
-                                                    class="avatar rounded-circle">{{$order->image}}
+                                                    src="{{asset('assets/img/profile/', $order->product->image)}}"
+                                                    class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
                                                 <div class="d-flex justify-content-between align-items-center">
@@ -118,7 +119,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </a>O
                                     @endforeach
 
                                     @foreach($aprovedBuilder as $order)
@@ -127,8 +128,8 @@
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                                                 <img alt="Image placeholder"
-                                                    src="{{asset('assets/img/profile/', $order->image)}}"
-                                                    class="avatar rounded-circle">{{$order->image}}
+                                                    src="{{url('assets/img/productimage/', $order->product->image)}}"
+                                                    class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
                                                 <div class="d-flex justify-content-between align-items-center">

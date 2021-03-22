@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}"
         type="text/css">
     <link rel="stylesheet" href="{{asset('assets/css/argon.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{mix('css/login.css')}}" type="text/css">
 </head>
 
 <body class="bg-default">
