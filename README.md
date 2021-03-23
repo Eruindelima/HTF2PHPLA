@@ -14,11 +14,11 @@ Como experimento prático ele está contextualizado na construção de um sistem
 Que tem como fundamento a distribuição de alimentos que não servem para serem comercializados em feiras livres mas servem como adubo de solo onde serão produzidos alimentos ou para serem utilizados como alimentos para animais e ou dependendo do estado se estiverem em condições de consumo porém não visivelmente bonitos podem virar um sopão ou laranjas amassadas elas podem ser usadas para suco de frutas pois amassada ela esta porém poderá ser usada desta forma. 
 
 ### 2. EQUIPE
-|Nome|Papel|Gituser|
-|--|--|--|
-|Eruin De lima Silva|Dev| Eruindelimasilva|
+|Nome|Papel|Gituser|LinkedIn|
+|--|--|--|--|
+|Eruin De lima Silva|Dev| Eruindelimasilva| https://www.linkedin.com/in/eruin-de-lima-silva-176a1a160/ |
 |José Tarcisio Gois Santos|Dev|tarcisiopsa|
-|Eliandro Araújo Gomes |Dev|EliandroAG|
+|Eliandro Araújo Gomes |Dev|EliandroAG| https://www.linkedin.com/in/eliandro-a-gomes-1b97458a/ |
 |Caique Rossetto |produto|CaiqueRossetto|
 |Miflny Moreira Rocha|produto|Miflny|
 
