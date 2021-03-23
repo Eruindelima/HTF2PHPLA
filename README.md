@@ -53,6 +53,6 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 
 > Tela de login 
 
-<img src="https://i.ibb.co/St6MVB6/index-hotfood.jpg" width="500">
+<img src="https://i.ibb.co/St6MVB6/index-hotfood.jpg" width="3000">
 
 > Tela inicial da Aplicação 
