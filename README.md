@@ -44,8 +44,10 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 - [x] Notificações em tempo real para que o doador receba informações de quem quer o alimeto
 - [x] Notificação inversa onde o donatário recebe em tempo real informações e situação de estado do pedido feito
 
+>Use Case
 
-#### 3.0 - Diagramas
+<img src="https://i.ibb.co/1LdGDBr/caso-de-uso-hotfood.jpg">
+
 
 ### 3.1 - Apresentação do Sistema 
 
