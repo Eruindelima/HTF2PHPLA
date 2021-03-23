@@ -26,7 +26,7 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 
 >Banco de dados Modelo Lógico
 
-<img src="https://i.ibb.co/bmRYQCg/banco-imagem.jpg" width="400"> 
+<img src="https://i.ibb.co/bmRYQCg/banco-imagem.jpg" width="700"> 
 
 #### 2.1 -ATORES 
 -Comerciantes </br>
