@@ -17,10 +17,10 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 |Nome|Papel|Gituser|LinkedIn|
 |--|--|--|--|
 |Eruin De lima Silva|Dev| Eruindelimasilva| https://www.linkedin.com/in/eruin-de-lima-silva-176a1a160/ |
-|José Tarcisio Gois Santos|Dev|tarcisiopsa|
+|José Tarcisio Gois Santos|Dev|tarcisiopsa| 
 |Eliandro Araújo Gomes |Dev|EliandroAG| https://www.linkedin.com/in/eliandro-a-gomes-1b97458a/ |
-|Caique Rossetto |produto|CaiqueRossetto|
-|Miflny Moreira Rocha|produto|Miflny|
+|Caique Rossetto |produto|CaiqueRossetto| https://www.linkedin.com/in/caique-rossetto-897978190/ |
+|Miflny Moreira Rocha|produto|Miflny| https://www.linkedin.com/in/miflny-moreira-44b1a01a1/ |
 
 ### 2. ESPECIFICAÇÃO
 
