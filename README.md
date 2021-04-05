@@ -16,7 +16,7 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 ### 2. EQUIPE
 |Nome|Papel|Gituser|LinkedIn|
 |--|--|--|--|
-|Eruin De lima Silva|Dev| Eruindelimasilva| https://www.linkedin.com/in/eruin-de-lima-silva-176a1a160/ |
+|Eruin De lima Silva|Dev| Eruindelimasilva| https://www.linkedin.com/in/eruin-de-lima/|
 |José Tarcisio Gois Santos|Dev|tarcisiopsa| 
 |Eliandro Araújo Gomes |Dev|EliandroAG| https://www.linkedin.com/in/eliandro-a-gomes-1b97458a/ |
 |Caique Rossetto |produto|CaiqueRossetto| https://www.linkedin.com/in/caique-rossetto-897978190/ |
