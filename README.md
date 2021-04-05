@@ -71,7 +71,7 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 - [PHP] maior que 7.4 (https://https://www.php.net//)
 - [Laravel] (https://laravel.com/)
 - [Composer] (https://getcomposer.org/) 
-- Logo após isso qudno você clonar o projeto em sua maquina modifique o .envexemple para . envi e faça as configurações em sua maquina.
+- Logo após isso quando você clonar o projeto em sua maquina modifique o .envexemple para . envi e faça as configurações em sua maquina.
 #### - Configurações:
 - 1.composer install && yarn dev
 - 2.php artisan key:generate
