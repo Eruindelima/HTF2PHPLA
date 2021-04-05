@@ -67,9 +67,9 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 
 #### 5 - Como rodar o projeto em sua maquina ?
 
-> Para rodar esta projeto em sua maquina você precisará instalar:
-> [PHP] maior que 7.4 (https://https://www.php.net//)
-> [Laravel] (https://laravel.com/)
-> [Composer] (https://getcomposer.org/)
+- Para rodar esta projeto em sua maquina você precisará instalar:
+- [PHP] maior que 7.4 (https://https://www.php.net//)
+- [Laravel] (https://laravel.com/)
+- [Composer] (https://getcomposer.org/)
   
 
