@@ -70,6 +70,13 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 - Para rodar esta projeto em sua maquina você precisará instalar:
 - [PHP] maior que 7.4 (https://https://www.php.net//)
 - [Laravel] (https://laravel.com/)
-- [Composer] (https://getcomposer.org/)
-  
-
+- [Composer] (https://getcomposer.org/) 
+- Logo após isso qudno você clonar o projeto em sua maquina modifique o .envexemple para . envi e faça as configurações em sua maquina.
+- configurações:
+- 1. composer install && yarn dev
+- 2. php artisan key:generate
+- 3. pahp artisan storage:link
+- 4. Editar as configurações doo banco para as configurações da máquina 
+- 5. composer dump-autoload && php artisan optimize:clear
+- 6. yarn dev 
+- php artisan serve
