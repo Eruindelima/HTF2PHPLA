@@ -58,3 +58,18 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 <img src="https://i.ibb.co/St6MVB6/index-hotfood.jpg" width="3000">
 
 > Tela inicial da Aplicação 
+
+#### 4 - Tecnologias envolvidas
+
+- [PHP](https://https://www.php.net//)
+- [Láravel](https://laravel.com/)
+
+
+#### 5 - Como rodar o projeto em sua maquina ?
+
+> Para rodar esta projeto em sua maquina você precisará instalar:
+> [PHP] maior que 7.4 (https://https://www.php.net//)
+> [Laravel] (https://laravel.com/)
+> [Composer] (https://getcomposer.org/)
+  
+
