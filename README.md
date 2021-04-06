@@ -62,7 +62,7 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 #### 4 - Tecnologias envolvidas
 
 - [PHP](https://https://www.php.net//)
-- [Láravel](https://laravel.com/)
+- [Laravel](https://laravel.com/)
 
 
 #### 5 - Como rodar o projeto em sua maquina ?
