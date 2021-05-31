@@ -73,10 +73,10 @@ Que tem como fundamento a distribuição de alimentos que não servem para serem
 - [Composer] (https://getcomposer.org/) 
 - Logo após isso quando você clonar o projeto em sua maquina modifique o .envexemple para . envi e faça as configurações em sua maquina.
 #### - Configurações:
-- 1.composer install && yarn dev
+- 1.composer install && npm install
 - 2.php artisan key:generate
 - 3.php artisan storage:link
 - 4.Editar as configurações doo banco para as configurações da máquina 
 - 5.composer dump-autoload && php artisan optimize:clear
-- 6.yarn dev 
+- 6.npm run dev 
 - 7.php artisan serve
